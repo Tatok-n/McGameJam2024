@@ -5,32 +5,45 @@ using UnityEngine;
 
 public class EagleVision : MonoBehaviour
 {
-    //Need to use lightweight RP (Import packages)
-    // Create > Rendering > Universal Render Pipeline > Pipeline Asset (follow renderer)
-    // Layers like target, enemy, ally, Postprocessed?
+    public Material enemy, objective, companion;
+    public float eagleGlow = 20f;
+    public float normalGlow = 0f;
 
-    public Camera cam1;
-    public Camera cam2;
+    //public Camera cam1;
+    //public Camera cam2;
 
+    /*
     // Start is called before the first frame update
     void Start()
     {
         cam1.enabled = true;
         cam2.enabled = false;
     }
+    */
 
-    void Vision()
+    public void Vision()
     {
-        cam1.enabled = !cam1.enabled;
-        cam2.enabled = !cam2.enabled;
+        if (Input.GetKey(KeyCode.V))
+        {
+            enemy.SetFloat("_emissionIntensity", eagleGlow);
+            objective.SetFloat("_emissionIntensity", eagleGlow);
+            companion.SetFloat("_emissionIntensity", eagleGlow);
+
+        } 
+        else
+        {
+            enemy.SetFloat("_emissionIntensity", normalGlow);
+            objective.SetFloat("_emissionIntensity", normalGlow);
+            companion.SetFloat("_emissionIntensity", normalGlow);
+        }
+        return;
     }
+    
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            Vision();
-        }
+        Vision();
     }
+    
 }
