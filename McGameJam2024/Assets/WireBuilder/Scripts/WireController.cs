@@ -97,6 +97,9 @@ public class WireController : MonoBehaviour
     public Vector3 selectPosition;
     public Transform mousePossHelper;
 
+    [Header("CUSTOM STUFF")]
+    public GameObject playerCamera;
+
 #if UNITY_EDITOR
     [Header("PRESETS")]
     /// <summary>
@@ -420,6 +423,12 @@ public class WireController : MonoBehaviour
             /// Call a function when the distance between the start anchor point and the End anchor point exceeds the maximum.
             /// Example: do not let the wire rope move any further.
             /// </summary>>
+            //endAnchorPoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            playerCamera.GetComponent<PickupController>().DropObject();
+            while (currentDistanceToStartAnchor > maxDistanceToStarAnchor - 10) 
+            {
+                //endAnchorPoint.transform.position = Vector3.MoveTowards(endAnchorPoint.transform.position, startAnchorPoint.position, 10 * Time.deltaTime);
+            }
         }
     }
 

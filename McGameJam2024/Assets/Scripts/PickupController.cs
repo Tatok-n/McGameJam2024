@@ -20,7 +20,7 @@ public class PickupController : MonoBehaviour
             if(heldObj == null)
             {
                 RaycastHit hit;
-                if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
+                if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange) && !hit.transform.gameObject.CompareTag("Segment"))
                 {
                     PickupObject(hit.transform.gameObject);
                 }
@@ -59,7 +59,7 @@ public class PickupController : MonoBehaviour
         }
     }
 
-    void DropObject()
+    public void DropObject()
     {
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
