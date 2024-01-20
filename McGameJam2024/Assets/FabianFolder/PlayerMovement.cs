@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
     public float groundDrag;
 
+    [Header("WallRunning")]
+    public float wallrunSpeed;
+    public bool wallrunning;
+
     [Header("Climbing")]
     public float climbSpeed;
     public bool climbing;
@@ -60,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        wallrunning,
         climbing,
         crouching,
         air
@@ -132,8 +137,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //Wallrun mode
+        if (wallrunning)
+        {
+            state = MovementState.wallrunning;
+            moveSpeed = wallrunSpeed;
+        }
+
         //Climbing mode
-        if (climbing)
+        else if (climbing)
         {
             state = MovementState.climbing;
             moveSpeed = climbSpeed;
