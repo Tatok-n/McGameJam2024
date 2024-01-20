@@ -16,8 +16,11 @@ public class PlugController : MonoBehaviour
     public Rigidbody endAnchorRB;
     [HideInInspector]
     public WireController wireController;
+    public GameObject playerCamera;
+    public GameObject powerOnObject;
     public void OnPlugged()
     {
+        powerOnObject.SetActive(true);
         OnWirePlugged.Invoke();
     }
 
@@ -27,12 +30,12 @@ public class PlugController : MonoBehaviour
         Debug.Log(other.name);
         if (other.gameObject == endAnchor.gameObject)
         {
-            transform.parent.GetComponent<WireController>().playerCamera.GetComponent<PickupController>().DropObject();
+            //transform.parent.GetComponent<WireController>().playerCamera.GetComponent<PickupController>().DropObject();
+            playerCamera.GetComponent<PickupController>().DropObject();
             isConected = true;
             endAnchorRB.isKinematic = true;
             endAnchor.transform.position = plugPosition.position;
             endAnchor.transform.rotation = transform.rotation;
-
 
             OnPlugged();
         }
@@ -40,12 +43,10 @@ public class PlugController : MonoBehaviour
 
     private void Update()
     {
-        Collider[] colliderArray = Physics.OverlapSphere(transform.position, 2f);
-        foreach (Collider collider in colliderArray)
+        if(!isConected)
         {
-            OnTriggerEnter(collider);
+            powerOnObject.SetActive(false);
         }
-
         if (isConected)
         {
             endAnchorRB.isKinematic = true;
