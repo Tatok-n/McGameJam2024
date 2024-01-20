@@ -74,6 +74,12 @@ MonoBehaviour:
     type: 3}
   selectPosition: {x: 0, y: 0, z: 0}
   mousePossHelper: {fileID: 541287800083086103}
+  playerCamera: {fileID: 0}
+  pastToz:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   presetJoint: {fileID: 2655988077585873504, guid: abc25b6363fdfea44958d0fb6b73e3c5,
     type: 2}
 --- !u!1 &541287799911911904
