@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1643911184465228270}
   m_Layer: 7
   m_Name: PlayerObj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -116,13 +116,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9162233879100107696}
+  - component: {fileID: 6115383316256436993}
   - component: {fileID: 750253597855901897}
   - component: {fileID: 6817894051016193228}
   - component: {fileID: 199467961318832444}
   - component: {fileID: 8970730454194258758}
+  - component: {fileID: 9134744293778662789}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,6 +147,29 @@ Transform:
   - {fileID: 6005021100640101003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6115383316256436993
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326062813772503778}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &750253597855901897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -186,7 +211,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 7
   sprintSpeed: 10
-  groundDrag: 5
+  groundDrag: 4
+  wallrunSpeed: 8.5
+  wallrunning: 0
   climbSpeed: 7
   climbing: 0
   jumpForce: 12
@@ -255,6 +282,29 @@ MonoBehaviour:
   slideYScale: 0.5
   startYScale: 0
   slideKey: 99
+--- !u!114 &9134744293778662789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3326062813772503778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c325050fadc5de4cb8900b45bbdfa21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 512
+  wallRunForce: 200
+  maxWallRunTime: 1.5
+  wallCheckDistance: 0.7
+  minJumpHeight: 2
+  orientation: {fileID: 3823266743474530198}
 --- !u!1 &4992050319620631611
 GameObject:
   m_ObjectHideFlags: 0
