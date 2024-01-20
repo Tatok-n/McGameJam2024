@@ -949,6 +949,60 @@ Transform:
   - {fileID: 577643443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &611994655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3326062813772503778, guid: 9f5aa2992627ed74fa883de68e36662e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077312407133858278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &611994658 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6817894051016193228, guid: 9f5aa2992627ed74fa883de68e36662e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077312407133858278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611994655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57cb16b95cdab14fb75be1db7a7d47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &611994659 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 750253597855901897, guid: 9f5aa2992627ed74fa883de68e36662e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077312407133858278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &611994660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611994655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0a2181a8d97574aa7934dd8be8caa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 1131415147}
+  rb: {fileID: 611994659}
+  pm: {fileID: 611994658}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 256
+  climbSpeed: 10
+  maxClimbTime: 2
+  climbJumpUpForce: 8
+  climbJumpBackForce: 6
+  jumpKey: 32
+  climbJumps: 2
+  detectionLength: 20
+  sphereCastRadius: 7
+  maxWallLookAngle: 40
+  minWallNormalAngleChange: 30
+  exitingWall: 0
+  exitWallTime: 0.75
 --- !u!1 &729681692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1873,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6817894051016193228, guid: 9f5aa2992627ed74fa883de68e36662e,
+        type: 3}
+      propertyPath: climbingScript
+      value: 
+      objectReference: {fileID: 611994660}
     - target: {fileID: 9162233879100107696, guid: 9f5aa2992627ed74fa883de68e36662e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1869,10 +1928,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 199467961318832444, guid: 9f5aa2992627ed74fa883de68e36662e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3326062813772503778, guid: 9f5aa2992627ed74fa883de68e36662e,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 611994660}
   m_SourcePrefab: {fileID: 100100000, guid: 9f5aa2992627ed74fa883de68e36662e, type: 3}
 --- !u!1001 &8881912709588284138
 PrefabInstance:
