@@ -40,6 +40,11 @@ public class PlugController : MonoBehaviour
 
     private void Update()
     {
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, 2f);
+        foreach (Collider collider in colliderArray)
+        {
+            OnTriggerEnter(collider);
+        }
 
         if (isConected)
         {

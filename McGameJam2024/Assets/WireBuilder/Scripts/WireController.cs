@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 #if UNITY_EDITOR
 using UnityEditor.Presets;
 using UnityEditor;
@@ -99,6 +101,7 @@ public class WireController : MonoBehaviour
 
     [Header("CUSTOM STUFF")]
     public GameObject playerCamera;
+    public Vector3[] pastToz = new Vector3[4];
 
 #if UNITY_EDITOR
     [Header("PRESETS")]
@@ -113,6 +116,10 @@ public class WireController : MonoBehaviour
     private void Start()
     {
         mousePossHelper.gameObject.SetActive(false);
+        pastToz[0] = new Vector3 (0f,0f,0f);
+        pastToz[1] = new Vector3 (0f,0f,0f);
+        pastToz[2] = new Vector3 (0f,0f,0f);
+        pastToz[3] = new Vector3 (0f,0f,0f);
     }
 
     private void OnValidate()
@@ -416,16 +423,36 @@ public class WireController : MonoBehaviour
     public void DistanceBetweenStartAndEnd()
     {
         currentDistanceToStartAnchor = Vector3.Distance(endAnchorTemp.position, starAnchorTemp.position);
+        if (currentDistanceToStartAnchor < maxDistanceToStarAnchor) 
+        {
+            Vector3 toz = new Vector3(0f,0f,0f);
+            
+            toz = endAnchorTemp.position;
+            
+            Debug.Log(endAnchorTemp.position);
+            
+            pastToz[3] = pastToz[2];
+            pastToz[2] = pastToz[1];
+            pastToz[1] = pastToz[0];
+            pastToz[0]= toz;
+
+                 
+        }
 
         if (currentDistanceToStartAnchor > maxDistanceToStarAnchor)
         {
+            endAnchorTemp.position = pastToz[1];
             /// <summary>
             /// Call a function when the distance between the start anchor point and the End anchor point exceeds the maximum.
             /// Example: do not let the wire rope move any further.
             /// </summary>>
-            endAnchorPoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            //playerCamera.GetComponent<PickupController>().DropObject();
-            //endAnchorPoint.transform.position = Vector3.MoveTowards(endAnchorPoint.transform.position, startAnchorPoint.position, 10);
+            Debug.Log(playerCamera.GetComponent<PickupController>().isHolding);
+            if (playerCamera.GetComponent<PickupController>().isHolding) 
+            {
+                playerCamera.GetComponent<PickupController>().DropObject();
+            }
+            //endAnchorPoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            endAnchorPoint.gameObject.transform.position = Vector3.MoveTowards(endAnchorPoint.position, startAnchorPoint.position, 1);
         }
     }
 

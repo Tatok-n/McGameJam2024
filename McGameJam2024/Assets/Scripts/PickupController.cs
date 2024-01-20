@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class PickupController : MonoBehaviour
     [Header("Phyics Parameters")]
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
+    public Boolean isHolding;
 
     private void Update() 
     {
@@ -49,6 +51,7 @@ public class PickupController : MonoBehaviour
     {
         if (pickObj.GetComponent<Rigidbody>())
         {
+            isHolding = true;
             heldObjRB = pickObj.GetComponent<Rigidbody>();
             heldObjRB.useGravity = false;
             heldObjRB.drag = 10;
@@ -67,5 +70,6 @@ public class PickupController : MonoBehaviour
 
         heldObj.transform.parent = null;
         heldObj = null;
+        isHolding = false;
     }
 }
