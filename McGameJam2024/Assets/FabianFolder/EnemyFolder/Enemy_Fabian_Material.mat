@@ -30,6 +30,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,6 +52,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorMap:
+        m_Texture: {fileID: 2800000, guid: d678439414949c340818af8dda656708, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
@@ -78,6 +86,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicMap:
+        m_Texture: {fileID: 2800000, guid: d2fd5ddcb647a3946869560399fb3200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -86,6 +98,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< Updated upstream:McGameJam2024/Assets/FabianFolder/EnemyFolder/Enemy_Fabian_Material.mat
+=======
+    - _RoughnessMap:
+        m_Texture: {fileID: 2800000, guid: 40a5c56f01a69cd449f118d50b5cbdfc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_441a7d161e874e478d69bd28e175293e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d678439414949c340818af8dda656708, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_45b023c9c59f4ae482a5521834972284_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 40a5c56f01a69cd449f118d50b5cbdfc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_b1ecf989301a4e2dab4f83cd64f42e08_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d2fd5ddcb647a3946869560399fb3200, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+>>>>>>> Stashed changes:McGameJam2024/Assets/Tarek/Assets/Shaders/Base.mat
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -201,6 +232,12 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
+<<<<<<< Updated upstream:McGameJam2024/Assets/FabianFolder/EnemyFolder/Enemy_Fabian_Material.mat
+=======
+    - _RenderQueueType: 1
+    - _RequireSplitLighting: 0
+    - _Roughness: 12.74
+>>>>>>> Stashed changes:McGameJam2024/Assets/Tarek/Assets/Shaders/Base.mat
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
