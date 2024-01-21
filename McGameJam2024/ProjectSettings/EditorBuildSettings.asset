@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Ana/AnaMenu.unity
     guid: 9cef2cf9ec403b342badb99c56bd702b
   - enabled: 1
-    path: Assets/Ana/AnaSceneGame.unity
-    guid: d69bc542cb8dec0479eadee61e34d6ee
+    path: Assets/FabianFolder/FabianScene.unity
+    guid: 24c81f4a77779b443aaa783236570272
+  - enabled: 1
+    path: Assets/Tarek 1/EndAnimatio.unity
+    guid: 2619c3445aceb3e458bf447a25e4a593
   m_configObjects: {}
