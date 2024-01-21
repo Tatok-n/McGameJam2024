@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Segment
   - EndAnchor
+  - PickUp
   layers:
   - Default
   - TransparentFX

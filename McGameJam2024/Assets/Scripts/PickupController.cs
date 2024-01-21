@@ -24,7 +24,14 @@ public class PickupController : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange) && !hit.transform.gameObject.CompareTag("Segment"))
                 {
-                    PickupObject(hit.transform.gameObject);
+                    if(!hit.transform.gameObject.CompareTag("PickUp"))
+                    {
+                        PickupObject(hit.transform.gameObject);
+                    }
+                    else if (!hit.transform.gameObject.GetComponent<PickUpObjectController>().isFrozen)
+                    {
+                        PickupObject(hit.transform.gameObject);
+                    }
                 }
             }
             else
