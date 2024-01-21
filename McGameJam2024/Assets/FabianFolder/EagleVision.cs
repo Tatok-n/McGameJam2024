@@ -27,7 +27,7 @@ public class EagleVision : MonoBehaviour
         {
             enemy.SetFloat("_emissionIntensity", eagleGlow);
             objective.SetFloat("_emissionIntensity", eagleGlow);
-            companion.SetFloat("_emissionIntensity", eagleGlow);
+            companion.SetFloat("_emissionIntensity", 26f);
 
         } 
         else
