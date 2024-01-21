@@ -3,19 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class PickUpObjectController : MonoBehaviour
 {
-    public GameObject plug1;
-    public GameObject plug2;
     public Boolean isFrozen;
+    public GameObject powerOnObject;
+    public GameObject playerCamera;
+    private int count;
+    private void Start() {
+        isFrozen = false;
+        powerOnObject.SetActive(false);
+    }
 
-    void Update() {
-        if (plug1.GetComponent<PlugController>().isConected || plug2.GetComponent<PlugController>().isConected) {
+    private void Update() {
+        count = 0;
+        foreach (Transform child in transform) {
+            if (child.gameObject.CompareTag("Plug")) {
+                if (child.GetComponent<PlugController>().isConected) {
+                    count += 1;
+                }
+            }
+        }
+        if (count > 0 ) {
             isFrozen = true;
+            if (count == transform.childCount) {
+                powerOnObject.SetActive(true);
+            }
+            else {
+                powerOnObject.SetActive(false);
+            }
         }
         else {
             isFrozen = false;
+            powerOnObject.SetActive(false);
         }
+
     }
 }

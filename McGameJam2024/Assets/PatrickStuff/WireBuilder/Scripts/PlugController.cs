@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,11 +17,13 @@ public class PlugController : MonoBehaviour
     public Rigidbody endAnchorRB;
     [HideInInspector]
     public WireController wireController;
-    public GameObject playerCamera;
-    public GameObject powerOnObject;
+    private GameObject playerCamera;
+    private void Start()
+    {
+        playerCamera = this.gameObject.transform.parent.GetComponent<PickUpObjectController>().playerCamera;
+    }
     public void OnPlugged()
     {
-        powerOnObject.SetActive(true);
         OnWirePlugged.Invoke();
     }
 
@@ -49,10 +52,12 @@ public class PlugController : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(!isConected)
         {
             powerOnObject.SetActive(false);
         }
+        */
         // check if the end anchor is in the plug position
         // if it is not, then is no longer connected
         if (endAnchor.transform.position != plugPosition.position)
@@ -69,6 +74,6 @@ public class PlugController : MonoBehaviour
             endAnchor.transform.rotation = Quaternion.Euler(eulerRotation);
         }
         */
-        
+
     }
 }
