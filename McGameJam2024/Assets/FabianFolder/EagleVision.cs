@@ -6,7 +6,7 @@ using UnityEngine;
 public class EagleVision : MonoBehaviour
 {
     public Material enemy, objective, companion;
-    public float eagleGlow = 20f;
+    public float eagleGlow = 5f;
     public float normalGlow = 0f;
 
     //public Camera cam1;
@@ -27,7 +27,7 @@ public class EagleVision : MonoBehaviour
         {
             enemy.SetFloat("_emissionIntensity", eagleGlow);
             objective.SetFloat("_emissionIntensity", eagleGlow);
-            companion.SetFloat("_emissionIntensity", 26f);
+            companion.SetFloat("_emissionIntensity", eagleGlow);
 
         } 
         else
