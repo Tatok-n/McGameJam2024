@@ -11,12 +11,14 @@ public class PickupController : MonoBehaviour
     private Rigidbody heldObjRB;
 
     [Header("Phyics Parameters")]
-    [SerializeField] private float pickupRange = 10.0f;
+    [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
     public Boolean isHolding;
 
     private void Update() 
     {
+        //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * pickupRange, Color.yellow);
+        
         if (Input.GetMouseButtonDown(0))
         {
             if(heldObj == null)

@@ -16,7 +16,7 @@ TagManager:
   - Wire
   - Water
   - UI
-  - 
+  - PickUpAble
   - whatIsPlayer
   - whatIsWall
   - whatIsGround
