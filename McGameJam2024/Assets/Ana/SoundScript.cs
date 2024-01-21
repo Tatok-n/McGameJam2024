@@ -27,11 +27,11 @@ public class SoundScript : MonoBehaviour
         timer = 0f;
         sources = new AudioSource[8];
 
-        instanciatedObjects = new List<AudioSource>();
+       // instanciatedObjects = new List<AudioSource>();
         for (int i=1;i<9;i++)
         { 
             
-            sources[i-1] = Instanciate(sources[i-1]) as AudioSource;
+           // sources[i-1] = Instanciate(sources[i-1]) as AudioSource;
             //sources[i-1] = sourcei;
 
         }
