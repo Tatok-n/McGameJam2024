@@ -393,6 +393,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 370505989051173200, guid: 82cfb4ad16c6e5f47ba39bc4d3148996,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 370505989051173200, guid: 82cfb4ad16c6e5f47ba39bc4d3148996,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 1497063929145653995, guid: 82cfb4ad16c6e5f47ba39bc4d3148996,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -447,6 +457,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096739173153280232, guid: 82cfb4ad16c6e5f47ba39bc4d3148996,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6286247785066757543, guid: 82cfb4ad16c6e5f47ba39bc4d3148996,
         type: 3}
