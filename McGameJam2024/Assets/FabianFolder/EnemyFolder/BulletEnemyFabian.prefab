@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -696729520912162855}
   - component: {fileID: 4430618010794183923}
   m_Layer: 0
-  m_Name: Bullet_Enemy_Fabian
+  m_Name: BulletEnemyFabian
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,5 +160,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3c1d1b6fc7b264d9c6e41023053e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 6940455704529625004, guid: 54d8470c198ff9849a13328f31f0d7a0,
+  respawnPoint: {fileID: 658001539269713194, guid: 3275424188bc9e748a882e4b1906ad03,
     type: 3}
