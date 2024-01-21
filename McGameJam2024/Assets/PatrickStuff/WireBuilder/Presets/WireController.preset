@@ -9,7 +9,8 @@ Preset:
   m_Name: WireController
   m_TargetType:
     m_NativeTypeID: 114
-    m_ManagedTypePPtr: {fileID: 11500000, guid: efb5ab323cd8185459f3d4c78c4fad2d, type: 3}
+    m_ManagedTypePPtr: {fileID: 11500000, guid: efb5ab323cd8185459f3d4c78c4fad2d,
+      type: 3}
     m_ManagedTypeFallback: 
   m_Properties:
   - target: {fileID: 0}
@@ -58,11 +59,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: maxDistanceToStarAnchor
-    value: 0
+    value: 1.9799999
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: segments.Array.size
-    value: 97
+    value: 99
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: segments.Array.data[0]
@@ -453,6 +454,14 @@ Preset:
     value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: segments.Array.data[97]
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: segments.Array.data[98]
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: undoSegments.Array.size
     value: 2
     objectReference: {fileID: 0}
@@ -487,23 +496,28 @@ Preset:
   - target: {fileID: 0}
     propertyPath: startAnchorPoint
     value: 
-    objectReference: {fileID: 1229081711585430608, guid: 4da736580b202eb4486768be93599f10, type: 3}
+    objectReference: {fileID: 1229081711585430608, guid: 4da736580b202eb4486768be93599f10,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: segment
     value: 
-    objectReference: {fileID: 4721452859494924073, guid: 849875b46444f03428e4827a73935668, type: 3}
+    objectReference: {fileID: 4721452859494924073, guid: 849875b46444f03428e4827a73935668,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: segmentNoPhysics
     value: 
-    objectReference: {fileID: 4721452859494924073, guid: 2f6f00131ed85584dbbee855f7fc0bb5, type: 3}
+    objectReference: {fileID: 4721452859494924073, guid: 2f6f00131ed85584dbbee855f7fc0bb5,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: endAnchorPoint
     value: 
-    objectReference: {fileID: 2306256389110725653, guid: 559da952238d1e64c86a4d71f980a14b, type: 3}
+    objectReference: {fileID: 2306256389110725653, guid: 559da952238d1e64c86a4d71f980a14b,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: plugObjt
     value: 
-    objectReference: {fileID: 3749660500698215857, guid: 1b6ad518bf036ee45b651ba015d0f3cf, type: 3}
+    objectReference: {fileID: 3749660500698215857, guid: 1b6ad518bf036ee45b651ba015d0f3cf,
+      type: 3}
   - target: {fileID: 0}
     propertyPath: selectPosition.x
     value: -0.388
@@ -521,7 +535,64 @@ Preset:
     value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: playerCamera
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[0].x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[0].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[0].z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[1].x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[1].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[1].z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[2].x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[2].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[2].z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[3].x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[3].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: pastToz.Array.data[3].z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: presetJoint
     value: 
-    objectReference: {fileID: 2655988077585873504, guid: abc25b6363fdfea44958d0fb6b73e3c5, type: 2}
+    objectReference: {fileID: 2655988077585873504, guid: abc25b6363fdfea44958d0fb6b73e3c5,
+      type: 2}
   m_ExcludedProperties: []

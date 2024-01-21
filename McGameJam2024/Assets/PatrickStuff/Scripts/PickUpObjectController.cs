@@ -8,38 +8,42 @@ using UnityEngine.UIElements;
 
 public class PickUpObjectController : MonoBehaviour
 {
-    public Boolean isFrozen;
+    public Boolean isFrozen,enabled;
     public GameObject powerOnObject;
     public GameObject playerCamera;
-    private int count;
+    public int count,tempcount;
 
     private void Start() 
     {
+        enabled = false;
         isFrozen = false;
         powerOnObject.SetActive(false);
     }
 
     private void Update() {
-        count = 0;
+       tempcount = 0;
         foreach (Transform child in transform) {
             if (child.gameObject.CompareTag("Plug")) {
                 if (child.GetComponent<PlugController>().isConected) {
-                    count += 1;
+                    tempcount += 1;
                 }
             }
         }
-        if (count > 0 ) {
+        count = tempcount;
+        
+        if ( count > 0 ) {
+            Debug.Log(count==2);
             isFrozen = true;
-            if (count == transform.childCount) {
+            if (count == 2) {
+                Debug.Log("A");
                 powerOnObject.SetActive(true);
+                enabled = true;
             }
-            else {
-                powerOnObject.SetActive(false);
-            }
+            
         }
         else {
             isFrozen = false;
-            powerOnObject.SetActive(false);
+            //powerOnObject.SetActive(false);
         }
 
     }
