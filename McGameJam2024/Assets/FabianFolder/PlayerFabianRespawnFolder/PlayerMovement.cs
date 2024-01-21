@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //public AudioSource source2;
+
     #region Parameters
     [Header("Movement")]
     private float moveSpeed;
@@ -72,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        /*
+        source2 = GetComponent<AudioSource>();
+        source2.enabled = false;
+        */
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -205,11 +212,13 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            //source2.enabled = true;
         }
 
         else if (!grounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            //source2.enabled = false;
         }
 
         //turn gravity off while on slope

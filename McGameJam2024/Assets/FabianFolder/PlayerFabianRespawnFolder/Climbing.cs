@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Climbing : MonoBehaviour
 {
+    public AudioSource source1;
+
     #region Parameters
     [Header("References")]
     public Transform orientation;
@@ -45,6 +47,12 @@ public class Climbing : MonoBehaviour
     private float exitWallTimer;
     #endregion
 
+    private void Start()
+    {
+        source1 = GetComponent<AudioSource>();
+        source1.enabled = false;
+    }
+
     private void Update()
     {
         WallCheck();
@@ -53,6 +61,11 @@ public class Climbing : MonoBehaviour
         if (climbing && !exitingWall)
         {
             ClimbingMovement();
+            source1.enabled = true;
+        }
+        else
+        {
+            source1.enabled = false;
         }
     }
 
