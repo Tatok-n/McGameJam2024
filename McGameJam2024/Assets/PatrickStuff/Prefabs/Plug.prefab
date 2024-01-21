@@ -169,8 +169,6 @@ MonoBehaviour:
   endAnchor: {fileID: 0}
   endAnchorRB: {fileID: 0}
   wireController: {fileID: 0}
-  playerCamera: {fileID: 0}
-  powerOnObject: {fileID: 0}
 --- !u!65 &4810950010921481706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -190,5 +188,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.06, z: 0.06}
+  m_Size: {x: 0.15, y: 0.15, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}

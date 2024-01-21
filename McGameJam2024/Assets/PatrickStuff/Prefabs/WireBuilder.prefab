@@ -74,7 +74,8 @@ MonoBehaviour:
     type: 3}
   selectPosition: {x: 0, y: 0, z: 0}
   mousePossHelper: {fileID: 541287800083086103}
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 4833634831224291659, guid: 399296db5129f824dba43b79060e0e2e,
+    type: 3}
   pastToz:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}

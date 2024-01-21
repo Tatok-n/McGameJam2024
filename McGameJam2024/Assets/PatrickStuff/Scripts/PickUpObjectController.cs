@@ -12,7 +12,9 @@ public class PickUpObjectController : MonoBehaviour
     public GameObject powerOnObject;
     public GameObject playerCamera;
     private int count;
-    private void Start() {
+
+    private void Start() 
+    {
         isFrozen = false;
         powerOnObject.SetActive(false);
     }

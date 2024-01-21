@@ -17,7 +17,6 @@ public class SoundScript : MonoBehaviour
     //public AudioSource source10;
     public AudioSource[] sources;
     private List<AudioSource> instanciatedObjects;
-    //private GameObject[] instObj;
     public float timer;
 
 
@@ -28,12 +27,9 @@ public class SoundScript : MonoBehaviour
         sources = new AudioSource[8];
 
         instanciatedObjects = new List<AudioSource>();
-        for (int i=1;i<9;i++)
+        for (int i=0; i<9; i++)
         { 
-            
-            sources[i-1] = Instanciate(sources[i-1]) as AudioSource;
-            //sources[i-1] = sourcei;
-
+            sources[i] = gameObject.AddComponent<AudioSource>();
         }
 
         
@@ -44,7 +40,7 @@ public class SoundScript : MonoBehaviour
     {
         timer += Time.deltaTime;
         //Random int between 1-8
-        if (timer>8){
+        if (timer > 8){
             timer = 0;
             int randomInt = Random.Range(1,8);
             sources[randomInt].Play();
