@@ -30,7 +30,6 @@ public class PlugController : MonoBehaviour
         Debug.Log(other.name);
         if (other.gameObject == endAnchor.gameObject)
         {
-            //transform.parent.GetComponent<WireController>().playerCamera.GetComponent<PickupController>().DropObject();
             playerCamera.GetComponent<PickupController>().DropObject();
             isConected = true;
             endAnchorRB.isKinematic = true;
