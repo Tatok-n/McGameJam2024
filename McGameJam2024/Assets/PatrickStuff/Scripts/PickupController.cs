@@ -39,6 +39,22 @@ public class PickupController : MonoBehaviour
                 DropObject();
             }
         }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            // Rotate Object Clockwise
+            if (heldObj != null)
+            {
+                heldObj.transform.Rotate(0, 0, 1);
+            }
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            // Rotate Object Counter Clockwise
+            if (heldObj != null)
+            {
+                heldObj.transform.Rotate(0, 0, -1);
+            }
+        }
         if(heldObj != null) 
         {
             MoveObject();

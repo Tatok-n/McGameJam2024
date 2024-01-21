@@ -24,7 +24,9 @@ public class PlugController : MonoBehaviour
         OnWirePlugged.Invoke();
     }
 
-
+    // On trigger enter is called when the object enters the trigger collider
+    // Checks if the object that entered the trigger is the end anchor
+    // If it is, then it sets the end anchor to the plug position and rotation
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
@@ -37,6 +39,11 @@ public class PlugController : MonoBehaviour
             endAnchor.transform.rotation = transform.rotation;
 
             OnPlugged();
+
+            endAnchorRB.isKinematic = true;
+            endAnchor.transform.position = plugPosition.position;
+            Vector3 eulerRotation = new Vector3(this.transform.eulerAngles.x + 90, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
+            endAnchor.transform.rotation = Quaternion.Euler(eulerRotation);
         }
     }
 
@@ -46,6 +53,7 @@ public class PlugController : MonoBehaviour
         {
             powerOnObject.SetActive(false);
         }
+        /*
         if (isConected)
         {
             endAnchorRB.isKinematic = true;
@@ -53,5 +61,6 @@ public class PlugController : MonoBehaviour
             Vector3 eulerRotation = new Vector3(this.transform.eulerAngles.x + 90, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
             endAnchor.transform.rotation = Quaternion.Euler(eulerRotation);
         }
+        */
     }
 }
