@@ -441,7 +441,6 @@ public class WireController : MonoBehaviour
 
         if (currentDistanceToStartAnchor > maxDistanceToStarAnchor)
         {
-            endAnchorTemp.position = pastToz[1];
             /// <summary>
             /// Call a function when the distance between the start anchor point and the End anchor point exceeds the maximum.
             /// Example: do not let the wire rope move any further.
@@ -451,8 +450,8 @@ public class WireController : MonoBehaviour
             {
                 playerCamera.GetComponent<PickupController>().DropObject();
             }
-            //endAnchorPoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            endAnchorPoint.gameObject.transform.position = Vector3.MoveTowards(endAnchorPoint.position, startAnchorPoint.position, 1);
+            endAnchorTemp.position = pastToz[2];
+            //endAnchorPoint.gameObject.transform.position = Vector3.MoveTowards(endAnchorPoint.position, startAnchorPoint.position, 1);
         }
     }
 

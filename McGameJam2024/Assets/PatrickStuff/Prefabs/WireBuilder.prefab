@@ -133,7 +133,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   _sides: 6
-  _radiusOne: 0.01
+  _radiusOne: 0.02
   _radiusTwo: 0
   _useWorldSpace: 0
   _useTwoRadii: 0
