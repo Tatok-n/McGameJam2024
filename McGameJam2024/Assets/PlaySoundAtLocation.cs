@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlaySoundAtLocation : MonoBehaviour
 {
     public AudioSource source;
+    public string subtitle;
+    public float delay;
     public bool hasPlayed = false;
 
     private void Start()
@@ -17,6 +19,7 @@ public class PlaySoundAtLocation : MonoBehaviour
         if (other.tag == "Player" && !hasPlayed)
         {
             source.Play();
+            Subtitle.instance.SetSubtitle(subtitle, delay);
             hasPlayed = true;
             //Destroy(this.gameObject);
         }
