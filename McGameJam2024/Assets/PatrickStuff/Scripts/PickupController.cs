@@ -7,7 +7,7 @@ public class PickupController : MonoBehaviour
 {
     [Header("Pickup Settings")]
     [SerializeField] Transform holdArea;
-    private GameObject heldObj;
+    public GameObject heldObj;
     private Rigidbody heldObjRB;
 
     [Header("Phyics Parameters")]
@@ -24,6 +24,7 @@ public class PickupController : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange) && !hit.transform.gameObject.CompareTag("Segment"))
                 {
+                    Debug.Log(hit.transform.gameObject.name);
                     if(!hit.transform.gameObject.CompareTag("PickUp"))
                     {
                         PickupObject(hit.transform.gameObject);

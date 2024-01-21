@@ -53,6 +53,13 @@ public class PlugController : MonoBehaviour
         {
             powerOnObject.SetActive(false);
         }
+        // check if the end anchor is in the plug position
+        // if it is not, then is no longer connected
+        if (endAnchor.transform.position != plugPosition.position)
+        {
+            isConected = false;
+        }
+
         /*
         if (isConected)
         {
@@ -62,5 +69,6 @@ public class PlugController : MonoBehaviour
             endAnchor.transform.rotation = Quaternion.Euler(eulerRotation);
         }
         */
+        
     }
 }

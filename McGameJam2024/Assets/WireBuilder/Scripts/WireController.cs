@@ -429,7 +429,7 @@ public class WireController : MonoBehaviour
             
             toz = endAnchorTemp.position;
             
-            Debug.Log(endAnchorTemp.position);
+            //Debug.Log(endAnchorTemp.position);
             
             pastToz[3] = pastToz[2];
             pastToz[2] = pastToz[1];
